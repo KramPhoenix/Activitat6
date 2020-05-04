@@ -38,4 +38,10 @@ Route::prefix('admin')->name('admin.')->middleware('auth', 'role')->group(functi
 
     Route::get('/users', 'AdminUserController@index')->name('users.index');
 
+    Route::resource('properties', 'AdminPropertyController')->only([
+        'index', 'show', 'edit', 'update'
+    ]);
+
+    Route::get('/properties/{id}/delete', 'AdminPropertyController@destroy')->name('properties.destroy');
+
 });

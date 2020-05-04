@@ -11,7 +11,7 @@
                     @foreach($properties as $property)
                         <div class="w-25 card bg-info">
                             <h5>{{ $property->title }}</h5>
-                            <img src="{{ $property->img }}">
+                            <img src="img/{{ $property->img }}">
                             <p>PRECIO: {{ $property->price }}€</p>
                             <p>{{ $property->description }}</p>
                         </div>

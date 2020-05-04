@@ -12,7 +12,7 @@
                     <a class="nav-link" href="{{ route('admin.users.index') }}">USUARIOS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">INMUEBLES</a>
+                    <a class="nav-link" href="{{ route('admin.properties.index') }}">INMUEBLES</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">VENTAS</a>
