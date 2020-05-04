@@ -14,7 +14,7 @@
                         <div class="form-group row">
                             <label for="img" class="col-12 col-form-label">Imagen: </label>
                             <div class="col-8">
-                                <input class="form-control" type="file" name="imagen">
+                                <input type="file" name="imagen">
                             </div>
                         </div>
                         <label for="price">Precio:</label><input class="form-control mb-4" type="text" placeholder="Precio de la propiedad" name="precio" value="">
