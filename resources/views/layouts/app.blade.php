@@ -58,11 +58,11 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="">{{ __('Inmuebles') }}</a>
+                                <a class="nav-link" href="{{ route('properties') }}">{{ __('Inmuebles') }}</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="">{{ __('Mis ventas') }}</a>
+                                <a class="nav-link" href="{{ route('myproperties.index') }}">{{ __('Mis propiedades') }}</a>
                             </li>
 
                             <li class="nav-item">

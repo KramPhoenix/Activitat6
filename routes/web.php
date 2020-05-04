@@ -20,6 +20,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/properties', 'PropertiesController@index')->name('properties');
+
+Route::resource('myproperties', 'MyPropertiesController')->only([
+    'index', 'create', 'store', 'edit', 'update'
+]);
+
 Route::get('/contact', function () {
     return view('contacto');
 });
