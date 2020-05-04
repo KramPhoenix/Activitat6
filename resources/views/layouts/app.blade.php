@@ -41,11 +41,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="">{{ __('Inmuebles') }}</a>
+                                <a class="nav-link" href="{{ route('properties') }}">{{ __('Inmuebles') }}</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="">{{ __('Contacto') }}</a>
+                                <a class="nav-link" href="/contact">{{ __('Contacto') }}</a>
                             </li>
 
                             <li class="nav-item">

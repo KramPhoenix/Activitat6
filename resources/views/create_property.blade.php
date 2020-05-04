@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="misventas col-lg-12 d-flex justify-content-center">
-        <form class="w-100 col-lg-12 mt-4 mb-4 d-flex justify-content-center" action="{{ route('myproperties.store') }}" method="post">
+        <form class="w-100 col-lg-12 mt-4 mb-4 d-flex justify-content-center" enctype="multipart/form-data" action="{{ route('myproperties.store') }}" method="post">
             @method('post')
             @csrf
             <input type="hidden" name="_method" value="POST"/>

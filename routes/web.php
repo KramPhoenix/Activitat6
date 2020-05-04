@@ -36,4 +36,6 @@ Route::prefix('admin')->name('admin.')->middleware('auth', 'role')->group(functi
         return view('admin.home');
     });
 
+    Route::get('/users', 'AdminUserController@index')->name('users.index');
+
 });
