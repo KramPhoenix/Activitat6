@@ -38,7 +38,12 @@ Route::prefix('admin')->name('admin.')->middleware('auth', 'role')->group(functi
 
     Route::get('/', 'AdminHomeController@index')->name('home');
 
-    Route::get('/users', 'AdminUserController@index')->name('users.index');
+    Route::resource('users', 'AdminUserController')->only([
+        'index', 'edit', 'update'
+    ]);
+
+    Route::get('/users/{id}/delete', 'AdminUserController@destroy')->name('users.destroy');
+
 
     Route::resource('properties', 'AdminPropertyController')->only([
         'index', 'show', 'edit', 'update'
