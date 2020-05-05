@@ -14,9 +14,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admin.properties.index') }}">INMUEBLES</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">VENTAS</a>
-                </li>
             </ul>
         </div>
     </nav>

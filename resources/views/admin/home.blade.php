@@ -7,19 +7,13 @@
         <div class="row d-flex justify-content-around">
             <div class="card col-lg-4 p-4">
                 <h2 class="text-center">USUARIOS</h2>
-                <p class="text-center">Usuarios registrados actualmente: </p>
-                <a href="" class="btn btn-primary">VER TODOS LOS USUARIOS</a>
+                <p class="text-center">Usuarios registrados actualmente: {{ $users }}</p>
+                <a href="{{ route('admin.users.index') }}" class="btn btn-primary">VER TODOS LOS USUARIOS</a>
             </div>
             <div class="card col-lg-4 p-4">
                 <h2 class="text-center">INMUEBLES</h2>
-                <p class="text-center">Inmuebles registrados actualmente: </p>
-                <a href="" class="btn btn-primary">VER TODOS LOS INMUEBLES</a>
-            </div>
-
-            <div class="card col-lg-8 mt-4 p-4">
-                <h2 class="text-center">VENTAS</h2>
-                <p class="text-center">Ventas realizadas actualmente: </p>
-                <a href="" class="btn btn-primary">VER TODAS LAS VENTAS</a>
+                <p class="text-center">Inmuebles registrados actualmente: {{ $properties }}</p>
+                <a href="{{ route('admin.properties.index') }}" class="btn btn-primary">VER TODOS LOS INMUEBLES</a>
             </div>
         </div>
     </section>

@@ -7,9 +7,9 @@
                 <div class="card-header">
                     <h3 class="font-weight-bolder">PROPIEDADES EN VENTA</h3>
                 </div>
-                <div class="card-body d-flex justify-content-around">
+                <div class="card-body d-flex justify-content-around flex-wrap">
                     @foreach($properties as $property)
-                        <div class="w-25 card bg-info p-2">
+                        <div class="col-lg-4 card bg-info p-2 m-2">
                             <h5 class="font-weight-bolder">{{ $property->title }}</h5>
                             <img width="100%" height="225" src="img/{{ $property->img }}">
                             <p><span class="font-weight-bolder">PRECIO: </span>{{ $property->price }}€</p>

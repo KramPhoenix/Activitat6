@@ -51,4 +51,43 @@ class MyPropertiesController extends Controller
         $property = Property::create($data);
         return redirect()->route('myproperties.index');
     }
+
+    public function edit($id)
+    {
+        $property = Property::find($id);
+
+        return view('edit_property', [
+            'property' => $property,
+            'id' => $id,
+        ]);
+    }
+
+    public function update($id, Request $request)
+    {
+        $property = Property::find($id);
+        $input = $request->all();
+
+        $input = $request->validate([
+            'titulo' => 'required',
+            'precio' => 'required',
+            'desc' => 'required',
+        ]);
+
+        $data = [
+            'title' => $input['titulo'],
+            'price'  => $input['precio'],
+            'description'  => $input['desc'],
+        ];
+
+        $property->update($data);
+        return redirect()->route('myproperties.index');
+    }
+
+    public function destroy($id)
+    {
+        Property::destroy($id);
+        return redirect()->route('myproperties.index');
+    }
+
+
 }

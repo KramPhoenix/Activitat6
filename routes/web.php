@@ -26,15 +26,17 @@ Route::resource('myproperties', 'MyPropertiesController')->only([
     'index', 'create', 'store', 'edit', 'update'
 ]);
 
+Route::get('/myproperties/{id}/delete', 'MyPropertiesController@destroy')->name('myproperties.destroy');
+
 Route::get('/contact', function () {
     return view('contacto');
 });
 
+/* ADMIN */
+
 Route::prefix('admin')->name('admin.')->middleware('auth', 'role')->group(function () {
 
-    Route::get('/', function () {
-        return view('admin.home');
-    });
+    Route::get('/', 'AdminHomeController@index')->name('home');
 
     Route::get('/users', 'AdminUserController@index')->name('users.index');
 
